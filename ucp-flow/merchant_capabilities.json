@@ -1,0 +1,16 @@
+{
+  "merchant_id": "demo_grocery_merchant",
+  "capabilities": [
+    "product_discovery",
+    "inventory_check",
+    "cart_create",
+    "coupon_apply",
+    "checkout_session",
+    "order_tracking",
+    "post_purchase_support"
+  ],
+  "fulfillment": [
+    "pickup",
+    "delivery"
+  ]
+}

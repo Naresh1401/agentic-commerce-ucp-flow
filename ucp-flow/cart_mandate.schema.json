@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CartMandate",
+  "type": "object",
+  "required": [
+    "user_id",
+    "cart_id",
+    "allowed_actions",
+    "budget_limit",
+    "expires_at"
+  ],
+  "properties": {
+    "user_id": {
+      "type": "string"
+    },
+    "cart_id": {
+      "type": "string"
+    },
+    "allowed_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "budget_limit": {
+      "type": "number"
+    },
+    "expires_at": {
+      "type": "string"
+    }
+  }
+}

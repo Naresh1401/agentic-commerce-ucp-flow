@@ -1,0 +1,15 @@
+{
+  "id": "07",
+  "repo": "agentic-commerce-ucp-flow",
+  "title": "UCP-Style Agentic Commerce Flow",
+  "summary": "Local UCP-style capability, cart mandate, checkout session, confirmation, and order tracking flow.",
+  "copy": [
+    "ucp-flow",
+    "ucp-flow.md"
+  ],
+  "extra_tests": {
+    "tests/test_ucp_flow.py": "\n                import importlib.util\n                from pathlib import Path\n\n                spec = importlib.util.spec_from_file_location('sample_ucp_flow', Path('ucp-flow/sample_ucp_flow.py'))\n                module = importlib.util.module_from_spec(spec)\n                spec.loader.exec_module(module)\n\n                def test_ucp_flow_has_required_steps():\n                    steps = module.build_flow()\n                    assert len(steps) == 11\n                    assert steps[4]['name'] == 'cart_mandate_creation'\n            "
+  },
+  "verify": "python3.11 -m pytest tests",
+  "run": "cd ucp-flow && python3.11 sample_ucp_flow.py"
+}

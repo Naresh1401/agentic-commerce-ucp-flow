@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CheckoutSession",
+  "type": "object",
+  "required": [
+    "checkout_session_id",
+    "cart_id",
+    "fulfillment_type",
+    "status",
+    "total"
+  ],
+  "properties": {
+    "checkout_session_id": {
+      "type": "string"
+    },
+    "cart_id": {
+      "type": "string"
+    },
+    "fulfillment_type": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "total": {
+      "type": "number"
+    }
+  }
+}
